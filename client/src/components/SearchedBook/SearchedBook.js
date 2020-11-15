@@ -1,16 +1,26 @@
 import React from "react";
-import Button from "@material-ui/core/Button"
+import Button from "@material-ui/core/Button";
 
 export default function SearchedBook(props) {
+    
+    const newBook = {
+            title: props.title,
+            authors: props.authors,
+            description: props.description,
+            image: props.image,
+            link: props.link,
+            dateAdded: Date.now()
+        }
+
+
     return (
         <div>
-            <h2>{props.title}</h2>
-            <p>{props.authors}</p>
-            <p>{props.description}</p>
-            <img src={props.image} alt={props.title}></img>
-            <Button variant="contained" color="primary" href={props.link}>View</Button>
-            <Button variant="contained" color="primary">Save</Button>
-
+            <h2>{newBook.title}</h2>
+            <p>{newBook.authors}</p>
+            <p>{newBook.description}</p>
+            <img src={newBook.image} alt={newBook.title}></img>
+            <Button variant="contained" color="primary" href={newBook.link}>View</Button>
+            <Button variant="contained" color="primary" onClick={() => {props.save(newBook)}}>Save</Button>
         </div>
 
     )

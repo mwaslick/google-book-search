@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import {makeStyles} from '@material-ui/core/styles'
 import SearchedBook from "../components/SearchedBook/SearchedBook"
-import searchBooks from "../utils/apiroutes";
+import API from "../utils/apiroutes";
 import Button from "@material-ui/core/Button"
 
 export default function Search() {
@@ -19,14 +19,22 @@ export default function Search() {
             console.log("no search term")
             return
         }
-        else searchBooks(searchTerm)
+        else API.searchBooks(searchTerm)
         .then (result => {
             console.log(result.data.items)
             setSearchResults(result.data.items)
         }).catch(err => {
             console.log(err)
         })
+    }
 
+    const saveFunction = (data) => {
+        API.saveBook(data)
+        .then (res => {
+            console.log(res)
+        }).catch(err => {
+            console.log(err)
+        })
     }
 
     const useStyles = makeStyles((theme) => ({
@@ -55,10 +63,7 @@ export default function Search() {
                 <Button variant="contained" color="primary" onClick={searchFunction}>
                     Search
                 </Button>
-
             </div>
-
-        
 
 
             {searchResults.map(book => {
@@ -69,6 +74,7 @@ export default function Search() {
                 description = {book.volumeInfo.description}
                 image= {book.volumeInfo.imageLinks.thumbnail}
                 link= {book.volumeInfo.infoLink}
+                save = {saveFunction}
 
                 />
                 
