@@ -19,7 +19,7 @@ export default function SearchedBook(props) {
             <p>{newBook.authors}</p>
             <p>{newBook.description}</p>
             <img src={newBook.image} alt={newBook.title}></img>
-            <Button variant="contained" color="primary" href={newBook.link}>View</Button>
+            <Button variant="contained" color="primary" href={newBook.link} target="_blank">View</Button>
             <Button variant="contained" color="primary" onClick={() => {props.save(newBook)}}>Save</Button>
         </div>
 

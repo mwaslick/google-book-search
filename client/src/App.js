@@ -15,9 +15,6 @@ function App() {
           <Route exact path="/search" component={Search} />
           <Route exact path="/save" component={Save} />
       </Container>
-
-
-
 </Router>
   )
 }

@@ -21,7 +21,7 @@ router.post("/api/books", (req, res) => {
 
 // Deletes a book
 router.delete("/api/books/:id", (req, res) => {
-    Book.findByIdAndDelete({_id: req.params.id})
+    Book.deleteOne({_id: req.params.id})
     .then(dbBook => {
         res.json(dbBook)
     })
