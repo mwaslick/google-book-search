@@ -41,8 +41,8 @@ export default function SavedBook(props) {
                 <p><strong>Author(s): </strong> {props.author(props.authors)} </p>
                 <p>{props.description}</p>
                 
-                <Button variant="contained" color="primary" href={props.link} target="_blank">View</Button>
-                <Button variant="contained" color="primary" onClick={() => {props.delete(props.id)}}>Delete</Button>
+                <Button variant="contained" style={{backgroundColor: '#69f0ae'}} href={props.link} target="_blank">View</Button>
+                <Button variant="contained" style={{backgroundColor: '#69f0ae'}} onClick={() => {props.delete(props.id)}}>Delete</Button>
                 </div>
             </Grid>
             </Grid>

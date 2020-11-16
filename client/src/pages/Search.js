@@ -5,7 +5,6 @@ import SearchedBook from "../components/SearchedBook/SearchedBook"
 import API from "../utils/apiroutes";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box'
 
@@ -101,7 +100,7 @@ export default function Search() {
                 <div>
              <TextField id="standard-basic book-search" label="Search for a book" value={searchTerm} onChange= {handleChange}/>
                 </div>
-                <Button variant="contained" color="primary" onClick={searchFunction}>
+                <Button variant="contained" style={{backgroundColor: '#64ffda'}} onClick={searchFunction}>
                     Search
                 </Button>
             </form>

@@ -49,8 +49,8 @@ export default function SearchedBook(props) {
                     <p><strong>Author(s): </strong>{props.author(newBook.authors)} </p>
                     <p>{newBook.description}</p>
                     
-                    <Button variant="contained" color="primary" href={newBook.link} target="_blank">View</Button>
-                    <Button variant="contained" color="primary" onClick={() => {props.save(newBook)}}>Save</Button>
+                    <Button variant="contained" style={{backgroundColor: '#69f0ae'}} href={newBook.link} target="_blank">View</Button>
+                    <Button variant="contained" style={{backgroundColor: '#69f0ae'}} onClick={() => {props.save(newBook)}}>Save</Button>
                     </div>
                 </Grid>
                 </Grid>
