@@ -3,7 +3,11 @@ import TextField from '@material-ui/core/TextField';
 import {makeStyles} from '@material-ui/core/styles'
 import SearchedBook from "../components/SearchedBook/SearchedBook"
 import API from "../utils/apiroutes";
-import Button from "@material-ui/core/Button"
+import Button from "@material-ui/core/Button";
+import Container from "@material-ui/core/Container";
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box'
 
 export default function Search() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -41,29 +45,60 @@ export default function Search() {
         root: {
           '& .MuiTextField-root': {
             margin: theme.spacing(1),
-            width: '50ch',
+            width: '75ch',
           },
+
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
         },
+
+        paper: {
+            marginTop: 20,
+            paddingTop: 20,
+        },
+
+        h1: {
+            fontSize: 30,
+            fontWeight: "bold",
+        }
+
+       
       }));
 
     const classes = useStyles();
 
 
     return (
-        <div>
+        <Container>
+                <Box 
+                className={classes.paper}
+                display="flex" 
+                alignItems="center"
+                justifyContent="center">
+                    <Typography variant="h1" className={classes.h1}>
+                    Type in a search, and Google API will find you a book!
 
-            <div>
+                    </Typography>
+
+            </Box>
+               
+                
+
+            <Box>
+
             <form className={classes.root} noValidate autoComplete="off">
                 <div>
              <TextField id="standard-basic book-search" label="Search for a book" value={searchTerm} onChange= {handleChange}/>
                 </div>
-            </form>
-                
-
                 <Button variant="contained" color="primary" onClick={searchFunction}>
                     Search
                 </Button>
-            </div>
+            </form>
+                
+            </Box>
+
+               
 
 
             {searchResults.map(book => {
@@ -80,8 +115,7 @@ export default function Search() {
                 
                 })}
 
-
-        </div>
+        </Container>
     )
 
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SavedBook from "../components/SavedBook/SavedBook";
 import API from "../utils/apiroutes";
+import Container from "@material-ui/core/Container";
 
 export default function Save() {
     const [savedBooks, setSavedBooks] = useState([])
@@ -36,7 +37,8 @@ export default function Save() {
     
 
     return (
-        <div>
+
+        <Container>
             {savedBooks.map(book => {
                 return <SavedBook
                 key= {book._id}
@@ -49,6 +51,6 @@ export default function Save() {
                 delete = {deleteFunction}
                 />
             })}
-        </div>
+        </Container>
     )
 }

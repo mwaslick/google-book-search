@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import Header from './components/Header/Header';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Container from '@material-ui/core/Container';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Search from './pages/Search'
 import Save from './pages/Save'
 import './App.css';
@@ -10,12 +8,18 @@ function App() {
   return (
     <Router>
        <Header />
-        <Container>
-         <Route exact path="/" component={Search} />
-          <Route exact path="/search" component={Search} />
-          <Route exact path="/save" component={Save} />
-      </Container>
-</Router>
+        <Switch>
+         <Route exact path="/">
+           <Search />
+         </Route>
+          <Route exact path="/search">
+            <Search />
+          </Route>
+          <Route exact path="/save">
+          <Save />
+          </Route>
+      </Switch>
+    </Router>
   )
 }
 
