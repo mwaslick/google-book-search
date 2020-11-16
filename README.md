@@ -12,6 +12,8 @@
 
 The Google Book Search app allows a user to type in a search value, and then they are presented with a list of books that match the search value provided. If a user likes the book, they can click on the "View" button to view more about the book on the Google Books website, or the "Save" button to save it to a list of favorites. When users click on the tab for "Saved Books", they can access their list of saved favorites, view the books on Google Books, or delete a book from their list of favorites. This application uses Node.js, React.js, MongoDB, Mongoose, Express, Axios, Nodemon, and Material-UI CSS Framework to function.
 
+You can visit the completed application at https://mw-googlebooksearch.herokuapp.com/.
+
 ## Screenshots
 
 Searching for Books
