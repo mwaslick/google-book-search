@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Google Book Search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Have you ever known what you wanted to read about, but couldn't find a perfect book for your preferred subject? The Google Book Search application utilizes the Google Books API to allow users to type in a search and be presented with books. If users are interested in a book they find, they can open it on Google Books for more information, or save it to a list of favorite books.
+## Table of Contents
 
-## Available Scripts
+* [Description](#description)
+* [Screenshots](#screenshots)
+* [License](#license)
+* [Questions](#questions)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+The Google Book Search app allows a user to type in a search value, and then they are presented with a list of books that match the search value provided. If a user likes the book, they can click on the "View" button to view more about the book on the Google Books website, or the "Save" button to save it to a list of favorites. When users click on the tab for "Saved Books", they can access their list of saved favorites, view the books on Google Books, or delete a book from their list of favorites. This application uses Node.js, React.js, MongoDB, Mongoose, Express, Axios, Nodemon, and Material-UI CSS Framework to function.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshots
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Searching for Books
+![An example of typing in a search for books and seeing results via Google Books, with View and Delete buttons](./screenshots/saved.png)
 
-### `npm test`
+Viewing Saved Books
+![An example of a saved list of books with a View and Delete button](./screenshots/searched.png)
+## License
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Copyright 2020 Maria Waslick
 
-### `npm run build`
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Questions
 
-### `npm run eject`
+If you have additional questions, you can contact me through my [GitHub Profile](https://github.com/mwaslick), or e-mail me at mariawaslick@gmail.com.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
