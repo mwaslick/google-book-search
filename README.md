@@ -17,10 +17,10 @@ You can visit the completed application at https://mw-googlebooksearch.herokuapp
 ## Screenshots
 
 Searching for Books
-![An example of typing in a search for books and seeing results via Google Books, with View and Delete buttons](./screenshots/saved.png)
+![An example of typing in a search for books and seeing results via Google Books, with View and Delete buttons](./screenshots/searched.png)
 
 Viewing Saved Books
-![An example of a saved list of books with a View and Delete button](./screenshots/searched.png)
+![An example of a saved list of books with a View and Delete button](./screenshots/saved.png)
 ## License
 
 Copyright 2020 Maria Waslick
