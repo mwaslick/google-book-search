@@ -41,6 +41,16 @@ export default function Search() {
         })
     }
 
+    const renderAuthors = (authors) => {
+        if (Array.isArray(authors)) {
+           return authors.join(", ")
+        } else if (!authors) {
+            return "Unknown"
+        } else {
+            return(authors)
+        }
+    }
+
     const useStyles = makeStyles((theme) => ({
         root: {
           '& .MuiTextField-root': {
@@ -106,6 +116,7 @@ export default function Search() {
                 key= {book.id}
                 title= {book.volumeInfo.title}
                 authors= {book.volumeInfo.authors}
+                author = {renderAuthors}
                 description = {book.volumeInfo.description}
                 image= {book.volumeInfo.imageLinks.thumbnail}
                 link= {book.volumeInfo.infoLink}

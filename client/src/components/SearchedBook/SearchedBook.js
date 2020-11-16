@@ -46,7 +46,7 @@ export default function SearchedBook(props) {
                 <Grid item xs={9}>
                     <div className={classes.root}>
                     <h2>{newBook.title}</h2>
-                    <p>{newBook.authors}</p>
+                    <p><strong>Author(s): </strong>{props.author(newBook.authors)} </p>
                     <p>{newBook.description}</p>
                     
                     <Button variant="contained" color="primary" href={newBook.link} target="_blank">View</Button>

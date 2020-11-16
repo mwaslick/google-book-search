@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import SavedBook from "../components/SavedBook/SavedBook";
 import API from "../utils/apiroutes";
 import Container from "@material-ui/core/Container";
+import Box from '@material-ui/core/Box';
+import {makeStyles} from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography'
 
 export default function Save() {
     const [savedBooks, setSavedBooks] = useState([])
@@ -34,11 +37,50 @@ export default function Save() {
             console.log(err)
         })}
 
-    
+    const renderAuthors = (authors) => {
+        if (Array.isArray(authors)) {
+           return authors.join(", ")
+        } else if (!authors) {
+            return "Unknown"
+        } else {
+            return(authors)
+        }
+    }
+
+    const useStyles = makeStyles((theme) => ({
+        root: {
+            marginTop: 20,
+            paddingTop: 20,
+        },
+
+        h1: {
+            fontSize: 30,
+            fontWeight: "bold",
+        }
+
+       
+      }));
+
+      const classes = useStyles();
+
 
     return (
 
         <Container>
+
+            <Box className={classes.root}
+            display="flex" 
+            alignItems="center"
+            justifyContent="center"
+            >
+
+                <Typography className={classes.h1}>
+                    Your Saved Books
+                </Typography>
+
+            </Box>
+
+
             {savedBooks.map(book => {
                 return <SavedBook
                 key= {book._id}
@@ -49,6 +91,7 @@ export default function Save() {
                 image= {book.image}
                 link= {book.link}
                 delete = {deleteFunction}
+                author = {renderAuthors}
                 />
             })}
         </Container>
